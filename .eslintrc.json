@@ -41,8 +41,10 @@
           "caseInsensitive": true
         }
       }
-    ]
+    ],
+    "semi": ["never"]
   },
+  
   "ignorePatterns": [
     "components/ui/**"
   ],
