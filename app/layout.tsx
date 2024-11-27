@@ -1,5 +1,6 @@
 import React from "react";
 import type { Metadata } from "next";
+import ThemeProvider from '../context/Theme'
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -20,12 +21,11 @@ const spaceGrotesk = localFont({
 export const metadata: Metadata = {
   title: "Dev Overflow",
   description:
-    "A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.",
+    "Join Dev Overflow, a vibrant community platform where developers can ask questions, share insights, and collaborate on programming challenges. Whether you're delving into web development, mobile apps, algorithms, or data structures, find the support and knowledge you need to enhance your skills and connect with fellow developers worldwide.",
   icons: {
     icon: "/images/site-logo.svg",
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -33,11 +33,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
+        
       </body>
     </html>
   );
