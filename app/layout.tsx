@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import ThemeProvider from '../context/Theme'
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/navigation/navbar";
 
 const inter = localFont({
   src: "./fonts/InterVF.ttf",
@@ -19,9 +20,9 @@ const spaceGrotesk = localFont({
 
 
 export const metadata: Metadata = {
-  title: "Dev Overflow",
+  title: "Dev_Flow",
   description:
-    "Join Dev Overflow, a vibrant community platform where developers can ask questions, share insights, and collaborate on programming challenges. Whether you're delving into web development, mobile apps, algorithms, or data structures, find the support and knowledge you need to enhance your skills and connect with fellow developers worldwide.",
+    "Join Dev_Flow, a vibrant community platform where developers can ask questions, share insights, and collaborate on programming challenges. Whether you're delving into web development, mobile apps, algorithms, or data structures, find the support and knowledge you need to enhance your skills and connect with fellow developers worldwide.",
   icons: {
     icon: "/images/site-logo.svg",
   },
@@ -37,7 +38,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>{children}</ThemeProvider>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <Navbar/>
+          {children}
+        </ThemeProvider>
         
       </body>
     </html>
