@@ -1,7 +1,11 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 const Home = () => {
-  <h1 className="text-3xl text-white font-black">Welcome to next js 15</h1>;
+  return (
+  <>
+  <h1 className="text-3xl">Welcome to next js 15</h1>
+  <h1 className="text-3xl font-space-grotesk">Welcome to next js 15</h1>
+  </>)
 };
 
 export default Home;
