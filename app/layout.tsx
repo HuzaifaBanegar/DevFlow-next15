@@ -20,9 +20,9 @@ const spaceGrotesk = localFont({
 
 
 export const metadata: Metadata = {
-  title: "Dev_Flow",
+  title: "DevDojo",
   description:
-    "Join Dev_Flow, a vibrant community platform where developers can ask questions, share insights, and collaborate on programming challenges. Whether you're delving into web development, mobile apps, algorithms, or data structures, find the support and knowledge you need to enhance your skills and connect with fellow developers worldwide.",
+    "Join DevDojo, a vibrant community platform where developers can ask questions, share insights, and collaborate on programming challenges. Whether you're delving into web development, mobile apps, algorithms, or data structures, find the support and knowledge you need to enhance your skills and connect with fellow developers worldwide.",
   icons: {
     icon: "/images/site-logo.svg",
   },
